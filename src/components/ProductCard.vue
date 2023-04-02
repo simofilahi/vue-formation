@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="container">
     <img :src="imgSrc" height="200" width="200" />
     <h5>{{ title }}</h5>
     <p>{{ description }}</p>
     <p>{{ price }} {{ currency }}</p>
-    <Button label="Buy" />
+    <Button label="Add to cart" />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   padding: 10px;

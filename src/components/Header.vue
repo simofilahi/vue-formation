@@ -2,16 +2,38 @@
   <nav class="nav-container">
     <div class="logo-container">logo</div>
     <ul class="links-container">
-      <li class="link-item">Home</li>
-      <li class="link-item">About</li>
-      <li class="link-item">Contact Us</li>
+      <router-link to="/" class="link-item">Home</router-link>
+      <router-link to="/about" class="link-item">About</router-link>
+      <router-link to="/contact" class="link-item">Contact</router-link>
     </ul>
-    <div class="user-icon">user icon</div>
+    <img
+      class="cart-icon"
+      :src="cartIcon"
+      height="24"
+      width="24"
+      @click="cartIconHandleClick"
+    />
+    <img class="user-icon" :src="userIcon" height="24" width="24" />
   </nav>
 </template>
 
 <script>
-export default {};
+import cartIcon from "@/assets/cart.svg";
+import userIcon from "@/assets/person.svg";
+
+export default {
+  data() {
+    return {
+      cartIcon,
+      userIcon,
+    };
+  },
+  methods: {
+    cartIconHandleClick() {
+      alert("Hi!");
+    },
+  },
+};
 </script>
 
 <style>
@@ -40,9 +62,17 @@ export default {};
   display: inline-block;
   margin: 5px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .user-icon {
   margin-right: 24px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  margin-right: 24px;
+  cursor: pointer;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main>
+    <main class="main">
       <slot></slot>
     </main>
     <Footer />
@@ -19,4 +19,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.main {
+  padding: 50px 20px;
+  height: 100%;
+}
+</style>

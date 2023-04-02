@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "price": 10,
+      "currency": "DH",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    },
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "price": 3,
+      "currency": "DH",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    },
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "price": 5,
+      "currency": "DH",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    }
+  ],
+  "categories": [
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    },
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    },
+    {
+      "title": "dummy-text",
+      "description": "dummy-text",
+      "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png"
+    }
+  ]
+}

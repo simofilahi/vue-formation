@@ -1,5 +1,5 @@
 <template>
-  <Home />
+  <router-view class="router-container"></router-view>
 </template>
 
 <script>
@@ -25,4 +25,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.router-container {
+  height: 100%;
+  width: 100%;
+}
+</style>

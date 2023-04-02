@@ -16,64 +16,45 @@
     </section>
     <section class="categories">
       <h4>Categories</h4>
+      <ul class="grid-container">
+        <li
+          class="grid-item"
+          v-for="(category, index) in categories"
+          :key="index"
+        >
+          <CategoryCard
+            :imgSrc="category.img"
+            :title="category.title"
+            :description="categories.description"
+          />
+        </li>
+      </ul>
     </section>
   </Layout>
 </template>
 
 <script>
+import CategoryCard from "../components/CategoryCard.vue";
+
 import Layout from "../components/Layout.vue";
 import ProductCard from "../components/ProductCard.vue";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   components: {
     Layout,
     ProductCard,
+    CategoryCard,
   },
-  data() {
-    return {
-      products: [
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-          price: 10,
-          currency: "DH",
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-          price: 3,
-          currency: "DH",
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-          price: 5,
-          currency: "DH",
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-      ],
-      categories: [
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-        {
-          title: "dummy-text",
-          description: "dummy-text",
-
-          img: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3f3e7049-5c99-428c-abcd-e246b086f2ed/air-force-1-07-mens-shoes-rXkGJX.png",
-        },
-      ],
-    };
+  computed: {
+    ...mapGetters({ products: "getProducts", categories: "getCategories" }),
+  },
+  methods: {
+    ...mapActions(["fetchProducts", "fetchCategories"]),
+  },
+  created() {
+    this.fetchProducts();
+    this.fetchCategories();
   },
 };
 </script>
